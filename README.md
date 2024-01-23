@@ -1,6 +1,6 @@
 # arch_manual_fan_curve
 Allows for the manual fan control of the 7xxx series of cards
-I was very confused and annoyed by my 7900xtx hitting 105 in memory temps. So I withheld from playing GOU heavy games. Today, I am tired. 
+I was very confused and annoyed by my 7900xtx hitting 105 in memory temps. So I withheld from playing GPU heavy games. Today, I am tired. 
 I eventually ran into this discussion which gave me the knowledge I needed to create the following script. Please be careful using it and
 I would read what was mentioned in the thread so you understand what is happening. Here is what the script does:
 
