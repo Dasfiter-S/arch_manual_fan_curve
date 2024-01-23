@@ -34,7 +34,7 @@ set_fan_curve() {
         exit 1
     fi
 
-    # Set the fan curve
+    # Set the fan curve here if you want something different
     echo '0 40 30' | sudo tee "$fan_curve_path"
     echo '1 50 50' | sudo tee "$fan_curve_path"
     echo '2 60 70' | sudo tee "$fan_curve_path"
