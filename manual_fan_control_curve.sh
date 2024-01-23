@@ -1,11 +1,9 @@
 #!/bin/bash
 
-# Function to append amdgpu.ppfeaturemask to GRUB_CMDLINE_LINUX_DEFAULT
 append_to_grub() {
     local grub_config="/etc/default/grub"
     local temp_file=$(mktemp)
 
-    # Ensure the script is run as root
     if [ "$(id -u)" != "0" ]; then
         echo "This script must be run as root" 1>&2
         exit 1
@@ -20,11 +18,9 @@ append_to_grub() {
     }
     { print }' "$grub_config" > "$temp_file" && mv "$temp_file" "$grub_config"
 
-    # Update GRUB
     sudo update-grub
 }
 
-# Function to set the fan curve
 set_fan_curve() {
     local fan_curve_path=$(find /sys -name fan_curve 2>/dev/null | grep gpu_od)
 
@@ -46,7 +42,6 @@ set_fan_curve() {
 append_to_grub
 set_fan_curve
 
-# Ask user for confirmation to commit changes
 read -p "Do you want to commit the changes to the GPU? [y/N]: " response
 if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]; then
     local fan_curve_path=$(find /sys -name fan_curve 2>/dev/null | grep gpu_od)
