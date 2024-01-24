@@ -1,8 +1,13 @@
-# arch_manual_fan_curve
-Allows for the manual fan control of the 7xxx series of cards using the 6.7 Kernel and above I presume. I have not tested any other Kernels.
+# Arch Manual Fan Curve
+Allows for the manual fan control of the 7xxx series of cards using the 6.7 Kernel and above I presume. I have not tested any other Kernels. The current limitation is that this script has to be run every time the system reboots. 
 I was very confused and annoyed by my 7900xtx hitting 105 in memory temps. So I withheld from playing GPU heavy games. Today, I am tired. 
 I eventually ran into this discussion (https://github.com/marazmista/radeon-profile/issues/293) which gave me the knowledge I needed to create the following script. Please be careful using it and
 I would read what was mentioned in the thread so you understand what is happening. Here is what the script does:
+
+To run the script simply download or clone the repo and do:
+`chmod +x manual_fan_control_curve.sh`
+`./manual_fan_control_curve.sh`
+If you want a different curve edit the values in the shell script to match what suits your needs.
 
 1. **Checking for Root Access:**
    The script starts by making sure it is being run with root access, which is like having administrator privileges. This is important because the actions the script is going to perform require these higher-level permissions. If the script is not run as root, it will stop and tell you that it needs root privileges.
