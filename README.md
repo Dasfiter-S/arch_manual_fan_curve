@@ -6,7 +6,7 @@ I would read what was mentioned in the thread so you understand what is happenin
 
 To run the script simply download or clone the repo and do:
 `chmod +x manual_fan_control_curve.sh`
-`./manual_fan_control_curve.sh`
+`sudo ./manual_fan_control_curve.sh`
 If you want a different curve edit the values in the shell script to match what suits your needs.
 
 1. **Checking for Root Access:**
